@@ -4,173 +4,284 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portal Educação Emocional | Mariana Arantes</title>
-  <meta name="description" content="Centro de Aplicação em Educação Emocional Integral. Aplicação prática da educação emocional escolar e desenvolvimento de competências socioemocionais em escolas, famílias e organizações." />
-  <meta name="keywords" content="educação emocional escolar, competências socioemocionais, saúde emocional na escola, prevenção de conflitos escolares, cultura emocional institucional, Mariana Arantes" />
+  <meta name="description" content="Centro de Aplicação em Educação Emocional Integral — EEI®. Mariana Arantes: Doutora em Educação, palestrante TEDx, autora da Metodologia EEI. Formação para escolas, empresas e famílias em Pernambuco e todo o Brasil." />
+  <meta name="keywords" content="educação emocional integral, EEI, competências socioemocionais, saúde emocional na escola, inteligência emocional, Mariana Arantes, bullying, cyberbullying, formação de educadores, Pernambuco, Brasil, TEDx, FINEP, metodologia EEI" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Mariana Arantes" />
+  <link rel="canonical" href="https://portal-educacao-emocional-5bnt.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://portal-educacao-emocional-5bnt.vercel.app/" />
+  <meta property="og:title" content="Portal Educação Emocional | Mariana Arantes — EEI®" />
+  <meta property="og:description" content="Centro de Aplicação em Educação Emocional Integral. Formação para escolas, empresas e famílias. Metodologia com base em pesquisa científica." />
+  <meta property="og:image" content="https://portal-educacao-emocional-5bnt.vercel.app/imgs/logo_portal_fundoazul.png" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Portal Educação Emocional" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portal Educação Emocional | Mariana Arantes — EEI®" />
+  <meta name="twitter:description" content="Centro de Aplicação em Educação Emocional Integral. Formação para escolas, empresas e famílias." />
+  <meta name="twitter:image" content="https://portal-educacao-emocional-5bnt.vercel.app/imgs/logo_portal_fundoazul.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Portal Educação Emocional",
+    "url": "https://portal-educacao-emocional-5bnt.vercel.app/",
+    "logo": "https://portal-educacao-emocional-5bnt.vercel.app/imgs/logo_eei.png",
+    "description": "Centro de Aplicação em Educação Emocional Integral — EEI®.",
+    "foundingDate": "2018",
+    "founder": { "@type": "Person", "name": "Mariana Arantes", "jobTitle": "Fundadora e Referência Técnica" },
+    "contactPoint": { "@type": "ContactPoint", "telephone": "+55-81-99197-8876", "email": "contato@educacaoemocional.com.br", "contactType": "customer service" },
+    "sameAs": ["https://instagram.com/portaleducacaoemocional"],
+    "areaServed": "BR"
+  }
+  </script>
+  <link rel="icon" type="image/png" href="imgs/logo_portal_semfundo.png" />
+  <link rel="apple-touch-icon" href="imgs/logo_portal_fundoazul.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <style>
-    :root { --navy: #1f3a5f; --cream: #f4f1ec; --terra: #c86a4a; --sage: #7c9a92; --ink: #333333; --cream-alt: #ede9e2; --navy-light: #2a4d7a; }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Lato', sans-serif; background: var(--cream); color: var(--ink); font-size: 17px; line-height: 1.75; overflow-x: hidden; }
-    h1, h2, h3, h4, blockquote { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; line-height: 1.2; }
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 5vw; background: rgba(244,241,236,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(31,58,95,0.08); transition: box-shadow 0.3s; }
-    nav.scrolled { box-shadow: 0 2px 20px rgba(31,58,95,0.1); }
-    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; color: var(--navy); letter-spacing: 0.02em; text-decoration: none; }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--ink); font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--terra); }
-    .nav-cta { background: var(--terra); color: white !important; padding: 0.5rem 1.2rem; border-radius: 3px; transition: background 0.2s !important; }
-    .nav-cta:hover { background: #b05a3b !important; color: white !important; }
-    #hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 80px; }
-    .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 6rem 5vw 6rem 8vw; background: var(--cream); }
-    .hero-eyebrow { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); font-weight: 700; margin-bottom: 1.5rem; font-family: 'Lato', sans-serif; }
-    .hero-left h1 { font-size: clamp(2.8rem, 4.5vw, 4.2rem); color: var(--navy); margin-bottom: 1.8rem; font-weight: 600; font-style: italic; }
-    .hero-lines { display: flex; flex-direction: column; gap: 0.2rem; margin-bottom: 1.8rem; padding-left: 1rem; border-left: 3px solid var(--terra); }
-    .hero-lines p { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--navy); font-style: italic; font-weight: 400; }
-    .hero-desc { font-size: 0.97rem; color: #555; max-width: 480px; line-height: 1.8; margin-bottom: 2.5rem; }
-    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn-primary { background: var(--terra); color: white; padding: 0.85rem 2rem; border-radius: 3px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.06em; font-weight: 700; font-family: 'Lato', sans-serif; transition: background 0.2s, transform 0.2s; display: inline-block; }
-    .btn-primary:hover { background: #b05a3b; transform: translateY(-1px); }
-    .btn-secondary { border: 2px solid var(--navy); color: var(--navy); padding: 0.85rem 2rem; border-radius: 3px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.06em; font-weight: 700; font-family: 'Lato', sans-serif; transition: all 0.2s; display: inline-block; }
-    .btn-secondary:hover { background: var(--navy); color: white; }
-    .hero-right { position: relative; overflow: hidden; background: var(--navy); }
-    .hero-carousel { width: 100%; height: 100%; min-height: calc(100vh - 80px); position: relative; overflow: hidden; }
-    .hero-carousel-track { display: flex; height: 100%; transition: transform 0.6s ease; }
-    .hero-slide { min-width: 100%; height: 100%; overflow: hidden; }
-    .hero-slide img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
-    .hero-carousel-dots { position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 10; }
-    .hero-carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); border: none; cursor: pointer; transition: background 0.2s; padding: 0; }
-    .hero-carousel-dot.active { background: white; }
-    .hero-carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.15); border: none; color: white; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; z-index: 10; transition: background 0.2s; }
-    .hero-carousel-btn:hover { background: rgba(255,255,255,0.3); }
-    .hero-carousel-btn.prev { left: 1rem; }
-    .hero-carousel-btn.next { right: 1rem; }
-    section { padding: 6rem 8vw; }
-    .section-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terra); font-weight: 700; font-family: 'Lato', sans-serif; margin-bottom: 1rem; }
-    .section-title { font-size: clamp(2rem, 3.5vw, 3rem); color: var(--navy); margin-bottom: 1.5rem; }
-    #atuacao { background: var(--cream-alt); }
-    .atuacao-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3.5rem; align-items: start; }
-    .atuacao-intro p { font-size: 1rem; color: #555; margin-bottom: 1.5rem; line-height: 1.85; }
-    .highlight-block { background: var(--navy); padding: 2rem 2.5rem; border-radius: 4px; margin-top: 2rem; display: flex; align-items: center; gap: 1.5rem; }
-    .highlight-block-text p { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; color: white; font-style: italic; line-height: 1.5; }
-    .highlight-block-text p + p { margin-top: 0.5rem; color: var(--sage); }
-    .highlight-eei-logo { width: 90px; height: 90px; object-fit: contain; flex-shrink: 0; opacity: 0.92; }
-    .atuacao-note { margin-top: 1.5rem; font-size: 0.88rem; color: #888; line-height: 1.7; }
-    .atuacao-cards { display: flex; flex-direction: column; gap: 1.5rem; }
-    .atuacao-card { background: white; padding: 1.8rem 2rem; border-radius: 4px; border-left: 4px solid var(--sage); transition: border-color 0.2s, transform 0.2s; }
-    .atuacao-card:hover { border-left-color: var(--terra); transform: translateX(4px); }
-    .atuacao-card h3 { font-size: 1.25rem; color: var(--navy); margin-bottom: 0.6rem; }
-    .atuacao-card p { font-size: 0.9rem; color: #666; line-height: 1.7; }
-    .atuacao-card .card-note { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--sage); font-style: italic; margin-top: 0.8rem; font-weight: 500; }
-    #pesquisa { background: var(--cream); }
-    .pesquisa-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
-    .pesquisa-card { background: white; border-radius: 4px; padding: 2rem; border: 1px solid rgba(31,58,95,0.1); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.2rem; transition: box-shadow 0.2s; }
-    .pesquisa-card:hover { box-shadow: 0 4px 20px rgba(31,58,95,0.08); }
-    .pesquisa-card img { width: 140px; height: 140px; object-fit: contain; }
-    .pesquisa-card h3 { font-size: 1.1rem; color: var(--navy); }
-    .pesquisa-card p { font-size: 0.88rem; color: #777; line-height: 1.7; }
-    .pesquisa-badge { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--terra); font-weight: 700; font-family: 'Lato', sans-serif; }
-    .quote-divider { background: var(--navy); padding: 3.5rem 8vw; }
-    .quote-divider-inner { display: grid; grid-template-columns: 1fr 280px; gap: 4rem; align-items: center; max-width: 1100px; margin: 0 auto; }
-    .quote-divider blockquote { font-size: clamp(1.4rem, 2.4vw, 2rem); color: white; font-style: italic; line-height: 1.45; }
-    .quote-divider blockquote em { color: var(--terra); font-style: normal; }
-    .quote-divider-photo { width: 280px; height: 320px; object-fit: cover; object-position: top center; border-radius: 4px; opacity: 0.88; }
-    #mariana { background: var(--cream); }
-    .mariana-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 5rem; margin-top: 3rem; align-items: start; }
-    .mariana-photo-wrap { position: relative; }
-    .mariana-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top center; border-radius: 4px; display: block; }
-    .finep-selo { position: absolute; bottom: -18px; right: -18px; width: 110px; height: 110px; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.18)); }
-    .mariana-content h2 { font-size: clamp(2rem, 3vw, 2.8rem); color: var(--navy); margin-bottom: 0.5rem; }
-    .mariana-role { font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--terra); font-weight: 700; font-family: 'Lato', sans-serif; margin-bottom: 1.8rem; }
-    .mariana-content p { font-size: 1rem; color: #555; margin-bottom: 1.2rem; line-height: 1.85; }
-    .credentials { display: flex; flex-direction: column; gap: 0.7rem; margin: 2rem 0; }
-    .credential { display: flex; align-items: center; gap: 0.8rem; font-size: 0.9rem; color: var(--ink); }
-    .credential::before { content: ''; width: 28px; height: 2px; background: var(--terra); flex-shrink: 0; }
-    .midia-section { margin-top: 2.5rem; }
-    .midia-section h4 { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sage); font-family: 'Lato', sans-serif; font-weight: 700; margin-bottom: 1rem; }
-    .midia-links { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .midia-link { padding: 0.4rem 1rem; border: 1px solid var(--sage); border-radius: 20px; font-size: 0.8rem; text-decoration: none; color: var(--sage); font-family: 'Lato', sans-serif; transition: all 0.2s; }
-    .midia-link:hover { background: var(--sage); color: white; }
-    #clientes { background: var(--cream-alt); }
-    .clientes-numbers { display: flex; gap: 3rem; margin: 2.5rem 0 3rem; flex-wrap: wrap; }
-    .big-number { display: flex; flex-direction: column; }
-    .big-number-value { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 4vw, 4rem); font-weight: 600; color: var(--navy); line-height: 1; }
-    .big-number-label { font-size: 0.82rem; color: #777; font-family: 'Lato', sans-serif; margin-top: 0.3rem; max-width: 200px; }
-    .tedx-block { background: white; border-left: 4px solid var(--terra); padding: 1.2rem 1.8rem; border-radius: 0 4px 4px 0; margin-bottom: 3rem; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
-    .tedx-block p { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--navy); font-style: italic; }
-    .tedx-link { background: var(--terra); color: white; padding: 0.45rem 1.1rem; border-radius: 3px; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.06em; font-weight: 700; font-family: 'Lato', sans-serif; white-space: nowrap; transition: background 0.2s; }
-    .tedx-link:hover { background: #b05a3b; }
-    .logos-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); font-weight: 700; font-family: 'Lato', sans-serif; margin-bottom: 1.5rem; display: block; }
-    .logos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 1.2rem; align-items: center; }
-    .logo-item { background: white; border-radius: 4px; padding: 1rem; display: flex; align-items: center; justify-content: center; height: 80px; transition: box-shadow 0.2s; }
-    .logo-item:hover { box-shadow: 0 2px 12px rgba(31,58,95,0.1); }
-    .logo-item img { max-width: 100%; max-height: 50px; object-fit: contain; filter: grayscale(30%); transition: filter 0.2s; }
-    .logo-item:hover img { filter: grayscale(0%); }
-    #depoimentos { background: var(--cream); }
-    .depo-carousel { position: relative; margin-top: 3.5rem; overflow: hidden; }
-    .depo-track { display: flex; transition: transform 0.4s ease; }
-    .depo-card { min-width: 100%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; padding: 0 0.25rem; }
-    .depo-item { background: white; padding: 2rem; border-radius: 4px; border-top: 3px solid transparent; box-shadow: 0 2px 15px rgba(0,0,0,0.04); }
-    .depo-item blockquote { font-size: 1rem; font-style: italic; color: var(--ink); line-height: 1.7; margin-bottom: 1.5rem; font-weight: 400; }
-    .depo-author { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sage); font-weight: 700; font-family: 'Lato', sans-serif; }
-    .depo-nav { display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 2rem; }
-    .depo-btn { background: none; border: 2px solid var(--navy); color: var(--navy); width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
-    .depo-btn:hover { background: var(--navy); color: white; }
-    .depo-dots { display: flex; gap: 8px; }
-    .depo-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(31,58,95,0.2); cursor: pointer; transition: background 0.2s; border: none; }
-    .depo-dot.active { background: var(--navy); }
-    #contato { background: var(--navy); text-align: center; }
-    #contato .section-title { color: white; }
-    #contato .section-label { color: var(--sage); }
-    .contato-desc { font-size: 1.05rem; color: rgba(255,255,255,0.65); max-width: 540px; margin: 0 auto 3rem; line-height: 1.8; }
-    .contato-btns { display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
-    .btn-whatsapp { background: var(--terra); color: white; padding: 1rem 2.2rem; border-radius: 3px; text-decoration: none; font-size: 0.88rem; letter-spacing: 0.06em; font-weight: 700; font-family: 'Lato', sans-serif; transition: background 0.2s, transform 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; }
-    .btn-whatsapp:hover { background: #b05a3b; transform: translateY(-1px); }
-    .btn-email { border: 2px solid rgba(255,255,255,0.3); color: white; padding: 1rem 2.2rem; border-radius: 3px; text-decoration: none; font-size: 0.88rem; letter-spacing: 0.06em; font-weight: 700; font-family: 'Lato', sans-serif; transition: all 0.2s; }
-    .btn-email:hover { background: rgba(255,255,255,0.08); }
-    .contato-info { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,0.1); }
-    .contato-info-item { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
-    .info-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.35); font-family: 'Lato', sans-serif; }
-    .info-value { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: rgba(255,255,255,0.75); }
-    footer { background: #111e2e; padding: 2rem 8vw; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: rgba(255,255,255,0.4); font-weight: 500; }
-    .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.25); font-family: 'Lato', sans-serif; }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-    .hero-eyebrow { animation: fadeUp 0.6s ease both; animation-delay: 0.1s; opacity: 0; }
-    .hero-left h1 { animation: fadeUp 0.6s ease both; animation-delay: 0.25s; opacity: 0; }
-    .hero-lines { animation: fadeUp 0.6s ease both; animation-delay: 0.4s; opacity: 0; }
-    .hero-desc { animation: fadeUp 0.6s ease both; animation-delay: 0.55s; opacity: 0; }
-    .hero-btns { animation: fadeUp 0.6s ease both; animation-delay: 0.7s; opacity: 0; }
-    @media (max-width: 900px) {
-      #hero { grid-template-columns: 1fr; min-height: auto; }
-      .hero-carousel { min-height: 320px; }
-      .hero-left { padding: 4rem 6vw 3rem; }
-      .atuacao-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .pesquisa-grid { grid-template-columns: 1fr; }
-      .quote-divider-inner { grid-template-columns: 1fr; }
-      .quote-divider-photo { display: none; }
-      .mariana-grid { grid-template-columns: 1fr; }
-      .depo-card { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
-      .clientes-numbers { gap: 1.5rem; }
+    :root { --navy:#1f3a5f; --cream:#f4f1ec; --terra:#c86a4a; --sage:#7c9a92; --ink:#333333; --cream-alt:#ede9e2; }
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Lato',sans-serif; background:var(--cream); color:var(--ink); font-size:17px; line-height:1.75; overflow-x:hidden; }
+    h1,h2,h3,h4,blockquote { font-family:'Cormorant Garamond',Georgia,serif; font-weight:500; line-height:1.2; }
+    nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1.1rem 5vw; background:rgba(244,241,236,0.92); backdrop-filter:blur(10px); border-bottom:1px solid rgba(31,58,95,0.08); transition:box-shadow 0.3s; }
+    nav.scrolled { box-shadow:0 2px 20px rgba(31,58,95,0.1); }
+    .nav-logo img { height:38px; width:auto; display:block; }
+    .nav-links { display:flex; gap:2rem; list-style:none; }
+    .nav-links a { text-decoration:none; color:var(--ink); font-size:0.82rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:700; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--terra); }
+    .nav-cta { background:var(--terra); color:white !important; padding:0.5rem 1.2rem; border-radius:3px; }
+    .nav-cta:hover { background:#b05a3b !important; }
+    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
+    .nav-hamburger span { display:block; width:24px; height:2px; background:var(--navy); border-radius:2px; transition:all 0.3s; }
+    .nav-hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity:0; }
+    .nav-hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+    .nav-mobile { display:none; position:fixed; top:65px; left:0; right:0; background:rgba(244,241,236,0.98); backdrop-filter:blur(10px); padding:1.5rem 5vw; border-bottom:1px solid rgba(31,58,95,0.1); z-index:99; flex-direction:column; gap:1.2rem; }
+    .nav-mobile.open { display:flex; }
+    .nav-mobile a { text-decoration:none; color:var(--ink); font-size:0.9rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:700; padding:0.5rem 0; border-bottom:1px solid rgba(31,58,95,0.08); }
+    .nav-mobile a:last-child { border-bottom:none; color:var(--terra); }
+    #hero { min-height:100vh; display:grid; grid-template-columns:1fr 1fr; padding-top:80px; }
+    .hero-left { display:flex; flex-direction:column; justify-content:center; padding:6rem 5vw 6rem 8vw; background:var(--cream); }
+    .hero-eyebrow { font-size:0.75rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--sage); font-weight:700; margin-bottom:1.5rem; font-family:'Lato',sans-serif; }
+    .hero-left h1 { font-size:clamp(2.8rem,4.5vw,4.2rem); color:var(--navy); margin-bottom:1.8rem; font-weight:600; font-style:italic; }
+    .hero-lines { display:flex; flex-direction:column; gap:0.2rem; margin-bottom:1.8rem; padding-left:1rem; border-left:3px solid var(--terra); }
+    .hero-lines p { font-family:'Cormorant Garamond',serif; font-size:1.3rem; color:var(--navy); font-style:italic; }
+    .hero-desc { font-size:0.97rem; color:#555; max-width:480px; line-height:1.8; margin-bottom:2.5rem; }
+    .hero-btns { display:flex; gap:1rem; flex-wrap:wrap; }
+    .btn-primary { background:var(--terra); color:white; padding:0.85rem 2rem; border-radius:3px; text-decoration:none; font-size:0.85rem; letter-spacing:0.06em; font-weight:700; font-family:'Lato',sans-serif; transition:background 0.2s,transform 0.2s; display:inline-block; }
+    .btn-primary:hover { background:#b05a3b; transform:translateY(-1px); }
+    .btn-secondary { border:2px solid var(--navy); color:var(--navy); padding:0.85rem 2rem; border-radius:3px; text-decoration:none; font-size:0.85rem; letter-spacing:0.06em; font-weight:700; font-family:'Lato',sans-serif; transition:all 0.2s; display:inline-block; }
+    .btn-secondary:hover { background:var(--navy); color:white; }
+    .hero-right { position:relative; overflow:hidden; background:var(--navy); }
+    .hero-carousel { width:100%; height:100%; min-height:calc(100vh - 80px); position:relative; overflow:hidden; }
+    .hero-carousel-track { display:flex; height:100%; transition:transform 0.6s ease; }
+    .hero-slide { min-width:100%; height:100%; overflow:hidden; }
+    .hero-slide img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
+    .hero-carousel-dots { position:absolute; bottom:1.5rem; left:50%; transform:translateX(-50%); display:flex; gap:8px; z-index:10; }
+    .hero-carousel-dot { width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,0.4); border:none; cursor:pointer; transition:background 0.2s; padding:0; }
+    .hero-carousel-dot.active { background:white; }
+    .hero-carousel-btn { position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.15); border:none; color:white; width:36px; height:36px; border-radius:50%; cursor:pointer; font-size:1.1rem; display:flex; align-items:center; justify-content:center; z-index:10; transition:background 0.2s; }
+    .hero-carousel-btn:hover { background:rgba(255,255,255,0.3); }
+    .hero-carousel-btn.prev { left:1rem; }
+    .hero-carousel-btn.next { right:1rem; }
+    section { padding:6rem 8vw; }
+    .section-label { font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--terra); font-weight:700; font-family:'Lato',sans-serif; margin-bottom:1rem; display:block; }
+    .section-title { font-size:clamp(2rem,3.5vw,3rem); color:var(--navy); margin-bottom:1.5rem; }
+    #quem-somos { background:var(--cream-alt); }
+    .historia-text { font-size:1rem; color:#555; line-height:1.9; max-width:820px; margin-bottom:1.5rem; }
+    .mvv-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:2rem; margin-top:2.5rem; }
+    .mvv-card { background:white; border-radius:4px; padding:2rem; }
+    .mvv-card.missao { border-top:4px solid var(--terra); }
+    .mvv-card.visao { border-top:4px solid var(--navy); }
+    .mvv-card.valores { border-top:4px solid var(--sage); }
+    .mvv-card h3 { font-size:1.1rem; color:var(--navy); margin-bottom:1rem; }
+    .mvv-card p { font-size:0.9rem; color:#666; line-height:1.75; }
+    .mvv-card ul { padding-left:0; display:flex; flex-direction:column; gap:0.4rem; }
+    .mvv-card ul li { list-style:none; font-size:0.88rem; color:#666; padding-left:1.2rem; position:relative; line-height:1.6; }
+    .mvv-card ul li::before { content:'—'; position:absolute; left:0; color:var(--terra); }
+    .ods-note { margin-top:2.5rem; font-size:0.85rem; color:#888; font-style:italic; border-left:3px solid var(--sage); padding-left:1rem; max-width:820px; }
+    #atuacao { background:var(--cream); }
+    .atuacao-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; margin-top:3.5rem; align-items:start; }
+    .atuacao-intro p { font-size:1rem; color:#555; margin-bottom:1.5rem; line-height:1.85; }
+    .highlight-block { background:var(--navy); padding:2rem 2.5rem; border-radius:4px; margin-top:2rem; display:flex; align-items:center; gap:1.5rem; }
+    .highlight-block-text p { font-family:'Cormorant Garamond',serif; font-size:1.35rem; color:white; font-style:italic; line-height:1.5; }
+    .highlight-block-text p+p { margin-top:0.5rem; color:var(--sage); }
+    .highlight-eei-logo { width:90px; height:90px; object-fit:contain; flex-shrink:0; opacity:0.92; }
+    .atuacao-note { margin-top:1.5rem; font-size:0.88rem; color:#888; line-height:1.7; }
+    .atuacao-cards { display:flex; flex-direction:column; gap:1.5rem; }
+    .atuacao-card { background:white; padding:1.8rem 2rem; border-radius:4px; border-left:4px solid var(--sage); transition:border-color 0.2s,transform 0.2s; }
+    .atuacao-card:hover { border-left-color:var(--terra); transform:translateX(4px); }
+    .atuacao-card h3 { font-size:1.25rem; color:var(--navy); margin-bottom:0.6rem; }
+    .atuacao-card p { font-size:0.9rem; color:#666; line-height:1.7; }
+    .atuacao-card .card-note { font-family:'Cormorant Garamond',serif; font-size:1rem; color:var(--sage); font-style:italic; margin-top:0.8rem; }
+    #pesquisa { background:var(--cream-alt); }
+    .pesquisa-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:2rem; margin-top:3rem; }
+    .pesquisa-card { background:white; border-radius:4px; padding:2rem; border:1px solid rgba(31,58,95,0.1); display:flex; flex-direction:column; align-items:center; text-align:center; gap:1.2rem; transition:box-shadow 0.2s; }
+    .pesquisa-card:hover { box-shadow:0 4px 20px rgba(31,58,95,0.08); }
+    .pesquisa-card img { width:140px; height:140px; object-fit:contain; }
+    .pesquisa-card h3 { font-size:1.1rem; color:var(--navy); }
+    .pesquisa-card p { font-size:0.88rem; color:#777; line-height:1.7; }
+    .pesquisa-badge { font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--terra); font-weight:700; font-family:'Lato',sans-serif; }
+    .quote-divider { background:var(--navy); padding:3.5rem 8vw; }
+    .quote-divider-inner { display:grid; grid-template-columns:1fr 280px; gap:4rem; align-items:center; max-width:1100px; margin:0 auto; }
+    .quote-divider blockquote { font-size:clamp(1.4rem,2.4vw,2rem); color:white; font-style:italic; line-height:1.45; }
+    .quote-divider blockquote em { color:var(--terra); font-style:normal; }
+    .quote-divider-photo { width:280px; height:320px; object-fit:cover; object-position:top center; border-radius:4px; opacity:0.88; }
+    #mariana { background:var(--cream); }
+    .mariana-grid { display:grid; grid-template-columns:1fr 2fr; gap:5rem; margin-top:3rem; align-items:start; }
+    .mariana-photo-wrap { position:relative; }
+    .mariana-photo { width:100%; aspect-ratio:3/4; object-fit:cover; object-position:top center; border-radius:4px; display:block; }
+    .finep-selo { position:absolute; bottom:-18px; right:-18px; width:110px; height:110px; object-fit:contain; filter:drop-shadow(0 2px 8px rgba(0,0,0,0.18)); }
+    .mariana-content h2 { font-size:clamp(2rem,3vw,2.8rem); color:var(--navy); margin-bottom:0.5rem; }
+    .mariana-role { font-size:0.8rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--terra); font-weight:700; font-family:'Lato',sans-serif; margin-bottom:1.8rem; }
+    .mariana-content p { font-size:1rem; color:#555; margin-bottom:1.2rem; line-height:1.85; }
+    .credentials { display:flex; flex-direction:column; gap:0.7rem; margin:2rem 0; }
+    .credential { display:flex; align-items:center; gap:0.8rem; font-size:0.9rem; color:var(--ink); }
+    .credential::before { content:''; width:28px; height:2px; background:var(--terra); flex-shrink:0; }
+    .midia-section { margin-top:2.5rem; }
+    .midia-section h4 { font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sage); font-family:'Lato',sans-serif; font-weight:700; margin-bottom:1rem; }
+    .midia-links { display:flex; gap:0.8rem; flex-wrap:wrap; }
+    .midia-link { padding:0.4rem 1rem; border:1px solid var(--sage); border-radius:20px; font-size:0.8rem; text-decoration:none; color:var(--sage); font-family:'Lato',sans-serif; transition:all 0.2s; }
+    .midia-link:hover { background:var(--sage); color:white; }
+    #clientes { background:var(--cream-alt); }
+    .clientes-numbers { display:grid; grid-template-columns:repeat(4,1fr); gap:2rem; margin:2.5rem 0 3rem; }
+    .big-number { display:flex; flex-direction:column; }
+    .big-number-value { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,3vw,3rem); font-weight:600; color:var(--navy); line-height:1; }
+    .big-number-label { font-size:0.82rem; color:#777; font-family:'Lato',sans-serif; margin-top:0.3rem; }
+    .tedx-block { background:white; border-left:4px solid var(--terra); padding:1.2rem 1.8rem; border-radius:0 4px 4px 0; margin-bottom:3rem; display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap; }
+    .tedx-block p { font-family:'Cormorant Garamond',serif; font-size:1.15rem; color:var(--navy); font-style:italic; }
+    .tedx-link { background:var(--terra); color:white; padding:0.45rem 1.1rem; border-radius:3px; text-decoration:none; font-size:0.78rem; letter-spacing:0.06em; font-weight:700; font-family:'Lato',sans-serif; white-space:nowrap; transition:background 0.2s; }
+    .tedx-link:hover { background:#b05a3b; }
+    .logos-label { font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--sage); font-weight:700; font-family:'Lato',sans-serif; margin-bottom:1.5rem; display:block; }
+    .logos-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(130px,1fr)); gap:1.2rem; }
+    .logo-item { background:white; border-radius:4px; padding:1rem; display:flex; align-items:center; justify-content:center; height:80px; transition:box-shadow 0.2s; }
+    .logo-item:hover { box-shadow:0 2px 12px rgba(31,58,95,0.1); }
+    .logo-item img { max-width:100%; max-height:50px; object-fit:contain; filter:grayscale(30%); transition:filter 0.2s; }
+    .logo-item:hover img { filter:grayscale(0%); }
+    #infoprodutos { background:var(--cream); }
+    .infoprodutos-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.8rem; margin-top:3rem; }
+    .infoproduto-card { background:white; border-radius:4px; padding:2rem; border:1px solid rgba(31,58,95,0.1); display:flex; flex-direction:column; gap:1rem; transition:box-shadow 0.2s,transform 0.2s; }
+    .infoproduto-card:hover { box-shadow:0 6px 24px rgba(31,58,95,0.1); transform:translateY(-2px); }
+    .infoproduto-card.destaque { border:2px solid var(--terra); }
+    .infoproduto-tag { font-size:0.68rem; letter-spacing:0.15em; text-transform:uppercase; font-weight:700; font-family:'Lato',sans-serif; padding:0.3rem 0.8rem; border-radius:20px; display:inline-block; width:fit-content; }
+    .tag-curso { background:rgba(200,106,74,0.1); color:var(--terra); }
+    .tag-guia { background:rgba(124,154,146,0.1); color:var(--sage); }
+    .tag-programa { background:rgba(31,58,95,0.08); color:var(--navy); }
+    .infoproduto-card h3 { font-size:1.2rem; color:var(--navy); line-height:1.3; }
+    .infoproduto-card p { font-size:0.88rem; color:#666; line-height:1.7; flex:1; }
+    .infoproduto-badge { font-size:0.75rem; color:var(--terra); font-weight:700; font-family:'Lato',sans-serif; }
+    .infoproduto-link { display:inline-block; margin-top:auto; background:var(--navy); color:white; padding:0.6rem 1.4rem; border-radius:3px; text-decoration:none; font-size:0.8rem; font-weight:700; font-family:'Lato',sans-serif; text-align:center; transition:background 0.2s; }
+    .infoproduto-link:hover { background:#2a4d7a; }
+    .infoproduto-link.em-breve { background:#ccc; cursor:default; pointer-events:none; }
+    .certificacao-depos { margin-top:4rem; }
+    .certificacao-depos h3 { font-size:1.6rem; color:var(--navy); margin-bottom:2rem; }
+    .cert-depo-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+    .cert-depo { background:var(--cream-alt); border-radius:4px; padding:1.5rem; border-left:3px solid var(--sage); }
+    .cert-depo blockquote { font-size:0.92rem; font-style:italic; color:var(--ink); line-height:1.7; margin-bottom:1rem; }
+    .cert-depo-author { font-size:0.78rem; font-weight:700; font-family:'Lato',sans-serif; color:var(--navy); }
+    .cert-depo-role { font-size:0.75rem; color:#888; font-family:'Lato',sans-serif; }
+    #depoimentos { background:var(--cream-alt); }
+    .depo-carousel { position:relative; margin-top:3.5rem; overflow:hidden; }
+    .depo-track { display:flex; transition:transform 0.4s ease; }
+    .depo-card { min-width:100%; display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; padding:0 0.25rem; }
+    .depo-item { background:white; padding:2rem; border-radius:4px; box-shadow:0 2px 15px rgba(0,0,0,0.04); display:flex; flex-direction:column; }
+    .depo-item blockquote { font-size:0.95rem; font-style:italic; color:var(--ink); line-height:1.7; margin-bottom:1.5rem; flex:1; }
+    .depo-author { font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--sage); font-weight:700; font-family:'Lato',sans-serif; }
+    .depo-nav { display:flex; justify-content:center; align-items:center; gap:1rem; margin-top:2rem; }
+    .depo-btn { background:none; border:2px solid var(--navy); color:var(--navy); width:40px; height:40px; border-radius:50%; cursor:pointer; font-size:1.1rem; display:flex; align-items:center; justify-content:center; transition:all 0.2s; }
+    .depo-btn:hover { background:var(--navy); color:white; }
+    .depo-dots { display:flex; gap:8px; }
+    .depo-dot { width:8px; height:8px; border-radius:50%; background:rgba(31,58,95,0.2); cursor:pointer; transition:background 0.2s; border:none; padding:0; }
+    .depo-dot.active { background:var(--navy); }
+    #contato { background:var(--navy); text-align:center; }
+    #contato .section-title { color:white; }
+    #contato .section-label { color:var(--sage); }
+    .contato-desc { font-size:1.05rem; color:rgba(255,255,255,0.65); max-width:540px; margin:0 auto 3rem; line-height:1.8; }
+    .contato-btns { display:flex; justify-content:center; gap:1.2rem; flex-wrap:wrap; margin-bottom:3.5rem; }
+    .btn-whatsapp { background:var(--terra); color:white; padding:1rem 2.2rem; border-radius:3px; text-decoration:none; font-size:0.88rem; letter-spacing:0.06em; font-weight:700; font-family:'Lato',sans-serif; transition:background 0.2s,transform 0.2s; display:inline-flex; align-items:center; gap:0.5rem; }
+    .btn-whatsapp:hover { background:#b05a3b; transform:translateY(-1px); }
+    .btn-email { border:2px solid rgba(255,255,255,0.3); color:white; padding:1rem 2.2rem; border-radius:3px; text-decoration:none; font-size:0.88rem; letter-spacing:0.06em; font-weight:700; font-family:'Lato',sans-serif; transition:all 0.2s; }
+    .btn-email:hover { background:rgba(255,255,255,0.08); }
+    .contato-info { display:flex; justify-content:center; gap:3rem; flex-wrap:wrap; padding-top:2.5rem; border-top:1px solid rgba(255,255,255,0.1); }
+    .contato-info-item { display:flex; flex-direction:column; align-items:center; gap:0.3rem; }
+    .info-label { font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.35); font-family:'Lato',sans-serif; }
+    .info-value { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:rgba(255,255,255,0.75); }
+    .info-value a { color:rgba(255,255,255,0.75); text-decoration:none; }
+    .info-value a:hover { color:white; }
+    footer { background:#111e2e; padding:2rem 8vw; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+    .footer-logo img { height:32px; width:auto; opacity:0.6; }
+    .footer-copy { font-size:0.75rem; color:rgba(255,255,255,0.25); font-family:'Lato',sans-serif; }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+    .hero-eyebrow{animation:fadeUp 0.6s ease both;animation-delay:0.1s;opacity:0}
+    .hero-left h1{animation:fadeUp 0.6s ease both;animation-delay:0.25s;opacity:0}
+    .hero-lines{animation:fadeUp 0.6s ease both;animation-delay:0.4s;opacity:0}
+    .hero-desc{animation:fadeUp 0.6s ease both;animation-delay:0.55s;opacity:0}
+    .hero-btns{animation:fadeUp 0.6s ease both;animation-delay:0.7s;opacity:0}
+    @media(max-width:900px){
+      section { padding:4rem 6vw; }
+      #hero { grid-template-columns:1fr; min-height:auto; }
+      .hero-carousel { min-height:280px; }
+      .hero-left { padding:3rem 6vw 2.5rem; }
+      .hero-left h1 { font-size:clamp(2.2rem,8vw,3rem); }
+      .hero-desc { font-size:0.92rem; }
+      .hero-btns { flex-direction:column; }
+      .btn-primary, .btn-secondary { text-align:center; width:100%; }
+      .mvv-grid { grid-template-columns:1fr; gap:1.2rem; }
+      .atuacao-grid { grid-template-columns:1fr; gap:2.5rem; }
+      .pesquisa-grid { grid-template-columns:1fr; gap:1.2rem; }
+      .mariana-grid { grid-template-columns:1fr; gap:2.5rem; }
+      .mariana-photo { aspect-ratio:4/3; }
+      .finep-selo { width:80px; height:80px; bottom:-12px; right:-12px; }
+      .infoprodutos-grid { grid-template-columns:1fr; gap:1.2rem; }
+      .cert-depo-grid { grid-template-columns:1fr; gap:1.2rem; }
+      .clientes-numbers { grid-template-columns:1fr 1fr; gap:1.5rem; }
+      .quote-divider { padding:2.5rem 6vw; }
+      .quote-divider-inner { grid-template-columns:1fr; }
+      .quote-divider-photo { display:none; }
+      .depo-card { grid-template-columns:1fr; }
+      .logos-grid { grid-template-columns:repeat(3,1fr); gap:0.8rem; }
+      .logo-item { height:65px; padding:0.6rem; }
+      .nav-links { display:none; }
+      .nav-hamburger { display:flex; }
+      .contato-info { gap:1.5rem; }
+      .midia-links { gap:0.5rem; }
+      .tedx-block { flex-direction:column; gap:1rem; align-items:flex-start; }
+      footer { flex-direction:column; align-items:center; text-align:center; gap:0.8rem; }
+    }
+    @media(max-width:480px){
+      section { padding:3rem 5vw; }
+      .hero-left { padding:2.5rem 5vw 2rem; }
+      .clientes-numbers { grid-template-columns:1fr; }
+      .logos-grid { grid-template-columns:repeat(2,1fr); }
+      .section-title { font-size:1.8rem; }
     }
   </style>
 </head>
 <body>
-  <!-- NAV -->
-  <nav id="navbar">
-    <a href="#hero" class="nav-logo">Portal Educação Emocional</a>
+<nav id="navbar">
+    <a href="#hero" class="nav-logo"><img src="imgs/logo_portal_semfundo.png" alt="Portal Educação Emocional" /></a>
     <ul class="nav-links">
+      <li><a href="#quem-somos">Quem Somos</a></li>
       <li><a href="#atuacao">Atuação</a></li>
       <li><a href="#mariana">Mariana Arantes</a></li>
-      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#infoprodutos">Cursos</a></li>
       <li><a href="#contato" class="nav-cta">Iniciar Conversa</a></li>
     </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#quem-somos" onclick="closeMenu()">Quem Somos</a>
+    <a href="#atuacao" onclick="closeMenu()">Atuação</a>
+    <a href="#mariana" onclick="closeMenu()">Mariana Arantes</a>
+    <a href="#infoprodutos" onclick="closeMenu()">Cursos</a>
+    <a href="#contato" onclick="closeMenu()">Iniciar Conversa</a>
+  </div>
 
-  <!-- HERO -->
   <section id="hero">
     <div class="hero-left">
       <p class="hero-eyebrow">Centro de Aplicação em Educação Emocional Integral — EEI®</p>
@@ -187,17 +298,17 @@
       </div>
     </div>
     <div class="hero-right">
-      <div class="hero-carousel" id="heroCarousel">
+      <div class="hero-carousel">
         <div class="hero-carousel-track" id="heroTrack">
-          <div class="hero-slide"><img src="imgs/foto1_sebrae_palco.jpg" alt="Mariana Arantes no palco SEBRAE" /></div>
-          <div class="hero-slide"><img src="imgs/foto2_grupo_bracos.jpg" alt="Grupo com braços levantados" /></div>
-          <div class="hero-slide"><img src="imgs/foto3_fiep_palco.png" alt="Palco FIEP" /></div>
-          <div class="hero-slide"><img src="imgs/foto4_sebrae_microfone.jpg" alt="Mariana palestrando" /></div>
-          <div class="hero-slide"><img src="imgs/foto5_portico_equipe.jpg" alt="Formação Pórtico" /></div>
+          <div class="hero-slide"><img src="imgs/foto1_sebrae_palco.jpg" alt="Mariana Arantes palestrando no SEBRAE com plateia de braços levantados" /></div>
+          <div class="hero-slide"><img src="imgs/foto2_grupo_bracos.jpg" alt="Grupo de educadores em formação de Educação Emocional Integral com braços levantados" /></div>
+          <div class="hero-slide"><img src="imgs/foto3_fiep_palco.png" alt="Mariana Arantes no palco da FIEP apresentando a Metodologia Educação Emocional Integral" /></div>
+          <div class="hero-slide"><img src="imgs/foto4_sebrae_microfone.jpg" alt="Mariana Arantes palestrando com microfone em evento institucional" /></div>
+          <div class="hero-slide"><img src="imgs/foto5_portico_equipe.jpg" alt="Formação corporativa em Educação Emocional Integral para equipe da empresa Pórtico" /></div>
         </div>
         <button class="hero-carousel-btn prev" id="heroPrev">&#8592;</button>
         <button class="hero-carousel-btn next" id="heroNext">&#8594;</button>
-        <div class="hero-carousel-dots" id="heroDots">
+        <div class="hero-carousel-dots">
           <button class="hero-carousel-dot active" data-index="0"></button>
           <button class="hero-carousel-dot" data-index="1"></button>
           <button class="hero-carousel-dot" data-index="2"></button>
@@ -208,7 +319,36 @@
     </div>
   </section>
 
-  <!-- ATUAÇÃO -->
+  <section id="quem-somos">
+    <p class="section-label">Nossa História</p>
+    <h2 class="section-title">Inovação com propósito desde 2018.</h2>
+    <p class="historia-text">O Portal Educação Emocional é uma empresa de inovação que desde 2018 desenvolve soluções de impacto social para promover o desenvolvimento da inteligência emocional das pessoas, contribuindo para a humanização dos ambientes onde atuam. O propósito está na nossa essência. Por isso, ajudamos a construir um mundo com mais bem-estar, onde as pessoas compreendam o real sentido do que significa viver bem, considerando suas características, desejos, necessidades, limites e possibilidades individuais e coletivos.</p>
+    <p class="historia-text">Mesmo com a inteligência artificial transformando o mundo de maneiras sem precedentes, automatizando tarefas e otimizando operações, ela também ressalta uma verdade inegável: a tecnologia não pode substituir a essência humana, especialmente quando se trata de habilidades como comunicação e inteligência emocional.</p>
+    <div class="mvv-grid">
+      <div class="mvv-card missao">
+        <h3>Missão</h3>
+        <p>Garantir que as habilidades humanas essenciais sejam desenvolvidas para enfrentar desafios pessoais e profissionais em um mundo tecnológico.</p>
+      </div>
+      <div class="mvv-card visao">
+        <h3>Visão</h3>
+        <p>Ser a principal referência no compartilhamento de informações que contribuam para a humanização dos processos e ambientes, ajudando a manter conexões humanas como chave para a saúde, o sucesso e a realização.</p>
+      </div>
+      <div class="mvv-card valores">
+        <h3>Valores</h3>
+        <ul>
+          <li>Acreditamos no ser humano</li>
+          <li>Construímos conhecimento coletivamente</li>
+          <li>Promovemos o desenvolvimento integral</li>
+          <li>Respeitamos os limites individuais e coletivos</li>
+          <li>Valorizamos o trabalho baseado em pesquisas</li>
+          <li>Estimulamos métodos inovadores de aprendizagem</li>
+          <li>Disseminamos práticas inclusivas</li>
+        </ul>
+      </div>
+    </div>
+    <p class="ods-note">Alinhados aos Objetivos de Desenvolvimento Sustentável (ODS) da ONU — especialmente Educação de Qualidade, Saúde e Bem-Estar, Igualdade de Gênero, Trabalho Decente, Redução de Desigualdades e Paz, Justiça e Instituições Eficazes.</p>
+  </section>
+
   <section id="atuacao">
     <p class="section-label">Campos de Atuação</p>
     <h2 class="section-title">Não existem respostas prontas<br/>quando se trata de humanização.</h2>
@@ -245,13 +385,12 @@
     </div>
   </section>
 
-  <!-- PESQUISA -->
   <section id="pesquisa">
     <p class="section-label">Projetos de Pesquisa Científica</p>
     <h2 class="section-title">Educação Emocional Integral<br/>com base em evidências.</h2>
     <div class="pesquisa-grid">
       <div class="pesquisa-card">
-        <img src="imgs/logo_eecpaz.png" alt="Educação Emocional e Cultura de Paz" />
+        <img src="imgs/logo_eecpaz.png" alt="Educação Emocional e Cultura de Paz — parceria IFPE Caruaru" />
         <div>
           <p class="pesquisa-badge">Parceria IFPE — Campus Caruaru</p>
           <h3>Educação Emocional e Cultura de Paz</h3>
@@ -259,7 +398,7 @@
         </div>
       </div>
       <div class="pesquisa-card">
-        <img src="imgs/logo_paee.png" alt="Programa de Apoio Emocional ao Educador de Escola Pública" />
+        <img src="imgs/logo_paee.png" alt="Programa de Apoio Emocional ao Educador de Escola Pública — parceria UFPE" />
         <div>
           <p class="pesquisa-badge">Parceria UFPE</p>
           <h3>Programa de Apoio Emocional ao Educador de Escola Pública</h3>
@@ -274,23 +413,29 @@
           <p>Parceria voltada ao desenvolvimento humano integral, unindo pesquisa e prática educacional com foco em competências socioemocionais.</p>
         </div>
       </div>
+      <div class="pesquisa-card">
+        <img src="imgs/logo_liana.jpg" alt="Liga Acadêmica de Neurociência Aplicada — LIANA UFPE" />
+        <div>
+          <p class="pesquisa-badge">Parceria UFPE — LIANA</p>
+          <h3>Liga Acadêmica de Neurociência Aplicada</h3>
+          <p>Ações de extensão, ensino e pesquisa voltadas para neurociências, com foco em inteligência emocional, cérebro social e acolhimento emocional para educadores e estudantes.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- QUOTE DIVIDER -->
   <div class="quote-divider">
     <div class="quote-divider-inner">
       <blockquote>"Ninguém rende bem quando está emocionalmente sobrecarregado ou quando o clima é ruim. Cuidar das relações é também cuidar da <em>aprendizagem</em>, do <em>trabalho</em> e da <em>convivência</em>."</blockquote>
-      <img src="imgs/foto4_sebrae_microfone.jpg" alt="Mariana Arantes" class="quote-divider-photo" />
+      <img src="imgs/foto4_sebrae_microfone.jpg" alt="Mariana Arantes palestrando" class="quote-divider-photo" />
     </div>
   </div>
 
-  <!-- MARIANA -->
   <section id="mariana">
     <p class="section-label">Direção Técnica e Metodológica</p>
     <div class="mariana-grid">
       <div class="mariana-photo-wrap">
-        <img src="imgs/mariana_perfil.jpg" alt="Mariana Arantes" class="mariana-photo" />
+        <img src="imgs/mariana_perfil.jpg" alt="Mariana Arantes — Fundadora do Portal Educação Emocional" class="mariana-photo" />
         <img src="imgs/selo_finep.png" alt="Mulheres Inovadoras FINEP 2021" class="finep-selo" />
       </div>
       <div class="mariana-content">
@@ -310,14 +455,18 @@
           <div class="midia-links">
             <a href="https://cbn.globoradio.globo.com/media/audio/405191/pandemia-deixou-o-assunto-da-educacao-emocional-ur.htm" target="_blank" class="midia-link">CBN</a>
             <a href="https://globoplay.globo.com/v/9323443/?s=0s" target="_blank" class="midia-link">TV Globo</a>
+            <a href="https://globoplay.globo.com/v/9688361/" target="_blank" class="midia-link">TV Globo 2</a>
+            <a href="https://record.r7.com/fala-brasil/videos/professores-sentem-os-impactos-fisicos-e-emocionais-da-rotina-de-aulas-virtuais-17112022/" target="_blank" class="midia-link">TV Record</a>
             <a href="https://politica.estadao.com.br/blogs/fausto-macedo/pela-saude-mental-e-emocional-dos-professores-agora/" target="_blank" class="midia-link">Estadão</a>
+            <a href="https://www.papodemae.com.br/noticias/educacao-emocional-e-humanizacao-dos-professores.html" target="_blank" class="midia-link">UOL</a>
+            <a href="https://www.jb.com.br/pais/opiniao/artigos/2021/07/1031337-pela-saude-mental-e-emocional-dos-professores-agora.html" target="_blank" class="midia-link">Jornal do Brasil</a>
+            <a href="https://www.youtube.com/watch?v=tOUw0H1UCIA" target="_blank" class="midia-link">Rádio Capital</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CLIENTES -->
   <section id="clientes">
     <p class="section-label">Clientes &amp; Parcerias</p>
     <h2 class="section-title">Quem já confia no método</h2>
@@ -327,8 +476,16 @@
         <span class="big-number-label">pessoas impactadas desde 2018</span>
       </div>
       <div class="big-number">
+        <span class="big-number-value">+6.000</span>
+        <span class="big-number-label">líderes impactados em 2023 e 2024</span>
+      </div>
+      <div class="big-number">
+        <span class="big-number-value">+1.000</span>
+        <span class="big-number-label">escolas públicas em todo o Brasil</span>
+      </div>
+      <div class="big-number">
         <span class="big-number-value">+100</span>
-        <span class="big-number-label">redes de ensino e grandes empresas atendidas</span>
+        <span class="big-number-label">redes de ensino e grandes empresas</span>
       </div>
     </div>
     <div class="tedx-block">
@@ -339,20 +496,93 @@
     <div class="logos-grid">
       <div class="logo-item"><img src="imgs/logo_sebrae.png" alt="SEBRAE" /></div>
       <div class="logo-item"><img src="imgs/logo_portico.png" alt="Pórtico" /></div>
-      <div class="logo-item"><img src="imgs/logo_pecagas.jpg" alt="PeçaGás" /></div>
-      <div class="logo-item"><img src="imgs/logo_gravata.png" alt="Prefeitura de Gravatá" /></div>
-      <div class="logo-item"><img src="imgs/logo_petrolina.png" alt="Prefeitura de Petrolina" /></div>
-      <div class="logo-item"><img src="imgs/logo_sindsprev.png" alt="Sindsprev" /></div>
-      <div class="logo-item"><img src="imgs/logo_cfl.jpg" alt="CFL Sindsprev" /></div>
       <div class="logo-item"><img src="imgs/logo_senac.png" alt="SENAC" /></div>
       <div class="logo-item"><img src="imgs/logo_fcap_upe.png" alt="FCAP/UPE" /></div>
       <div class="logo-item"><img src="imgs/logo_upe.jpg" alt="UPE" /></div>
       <div class="logo-item"><img src="imgs/logo_inside_sales.png" alt="Inside Sales Academy" /></div>
       <div class="logo-item"><img src="imgs/logo_sicap.jpg" alt="SICAP Soluções" /></div>
+      <div class="logo-item"><img src="imgs/logo_pecagas.jpg" alt="PeçaGás" /></div>
+      <div class="logo-item"><img src="imgs/logo_gravata.png" alt="Prefeitura de Gravatá" /></div>
+      <div class="logo-item"><img src="imgs/logo_petrolina.png" alt="Prefeitura de Petrolina" /></div>
+      <div class="logo-item"><img src="imgs/logo_sindsprev.png" alt="Sindsprev" /></div>
+      <div class="logo-item"><img src="imgs/logo_cfl.jpg" alt="CFL Sindsprev" /></div>
+    </div>
+  </section>
+  <section id="infoprodutos">
+    <p class="section-label">Cursos &amp; Materiais</p>
+    <h2 class="section-title">Aprenda com a Metodologia<br/>Educação Emocional Integral.</h2>
+    <div class="infoprodutos-grid">
+      <div class="infoproduto-card">
+        <span class="infoproduto-tag tag-guia">Guia</span>
+        <h3>Estatuto Antibullying para Escolas</h3>
+        <p>Material estruturado para auxiliar escolas na implementação de políticas de combate ao bullying e cyberbullying.</p>
+        <a href="https://www.portaleducacaoemocional.com.br/estatuto-antibullying?v=69b9c30550948" target="_blank" class="infoproduto-link">Acessar</a>
+      </div>
+      <div class="infoproduto-card">
+        <span class="infoproduto-tag tag-programa">Programa</span>
+        <h3>Programa Conexão Família Escola</h3>
+        <p>Fortalecimento do vínculo entre família e escola por meio de competências socioemocionais aplicadas no cotidiano.</p>
+        <a href="https://www.portaleducacaoemocional.com.br/familia-escola?v=69b9c3409a648" target="_blank" class="infoproduto-link">Acessar</a>
+      </div>
+      <div class="infoproduto-card">
+        <span class="infoproduto-tag tag-curso">Curso</span>
+        <h3>Inteligência Emocional para Educadores</h3>
+        <p>Formação prática em inteligência emocional aplicada à educação.</p>
+        <span class="infoproduto-badge">Certificado por instituição reconhecida pelo MEC</span>
+        <a href="https://www.portaleducacaoemocional.com.br/curso-inteligencia-emocional-para-educadores?v=69b9c3872d0a4" target="_blank" class="infoproduto-link">Acessar</a>
+      </div>
+      <div class="infoproduto-card">
+        <span class="infoproduto-tag tag-guia">Guia</span>
+        <h3>Como Lidar com o Bullying e o Cyberbullying</h3>
+        <p>Guia completo com orientações práticas para identificar, prevenir e agir diante do bullying e cyberbullying.</p>
+        <a href="https://www.portaleducacaoemocional.com.br/como-lidar-com-o-bullying-e-o-cyberbullying-guia-completo?v=69b9c38a8bf8b" target="_blank" class="infoproduto-link">Acessar</a>
+      </div>
+      <div class="infoproduto-card destaque">
+        <span class="infoproduto-tag tag-curso">Certificação</span>
+        <h3>Certificação na Metodologia Educação Emocional Integral</h3>
+        <p>Torne-se um facilitador da EEI e tenha capacitação e suporte para atuar em escolas e instituições de ensino. Certificado por instituição reconhecida pelo MEC.</p>
+        <span class="infoproduto-badge">&#128197; Nova turma em breve</span>
+        <a class="infoproduto-link em-breve">Em breve</a>
+      </div>
+    </div>
+
+    <div class="certificacao-depos">
+      <h3>O que dizem os professores certificados</h3>
+      <div class="cert-depo-grid">
+        <div class="cert-depo">
+          <blockquote>"Com o Portal Educação Emocional, eu percebi que não estou sozinha. A comunidade que tem no Portal para educadores mudou a minha vida porque eu sou uma professora mais segura, mais feliz e consigo deixar memórias muito melhores nos meus alunos."</blockquote>
+          <p class="cert-depo-author">Elis Honório</p>
+          <p class="cert-depo-role">Professora certificada na Metodologia EEI — São Paulo</p>
+        </div>
+        <div class="cert-depo">
+          <blockquote>"O que eu aprendi aqui faz muito sentido para as minhas práticas. As relações com as outras pessoas passaram a fazer mais sentido."</blockquote>
+          <p class="cert-depo-author">Regina Machado</p>
+          <p class="cert-depo-role">Professora certificada na Metodologia EEI — Bahia</p>
+        </div>
+        <div class="cert-depo">
+          <blockquote>"O Portal é uma grande rede de apoio em todo o país que nos auxilia num processo de construção do conhecimento das nossas emoções e onde também aprendemos a lidar com as nossas emoções em todos os lugares, inclusive na escola."</blockquote>
+          <p class="cert-depo-author">Tiago Campos</p>
+          <p class="cert-depo-role">Professor certificado na Metodologia EEI — Pernambuco</p>
+        </div>
+        <div class="cert-depo">
+          <blockquote>"Aqui no Portal Educação Emocional, eu encontrei novas portas para seguir com meus projetos. Aprendi que somos sustento e fortalecimento uns para os outros."</blockquote>
+          <p class="cert-depo-author">Amanda Mauri</p>
+          <p class="cert-depo-role">Professora certificada na Metodologia EEI — Espírito Santo</p>
+        </div>
+        <div class="cert-depo">
+          <blockquote>"A partir desse processo, eu pude trabalhar diversas questões importantes pra mim. Passei a me sentir mais empoderada para uma relação mais respeitosa e mais humana."</blockquote>
+          <p class="cert-depo-author">Joice Luz</p>
+          <p class="cert-depo-role">Gestora Pedagógica certificada na Metodologia EEI — Ceará</p>
+        </div>
+        <div class="cert-depo">
+          <blockquote>"O Portal Educação Emocional é uma abertura que me permitiu sair de um lugar de desconhecimento sobre as emoções para um lugar de conhecimento e de conexões de ideias e propósitos!"</blockquote>
+          <p class="cert-depo-author">Jackeline Camboim</p>
+          <p class="cert-depo-role">Professora certificada na Metodologia EEI — Pernambuco</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- DEPOIMENTOS -->
   <section id="depoimentos">
     <p class="section-label">Depoimentos</p>
     <h2 class="section-title">O que dizem quem viveu a experiência</h2>
@@ -360,8 +590,8 @@
       <div class="depo-track" id="depoTrack">
         <div class="depo-card">
           <div class="depo-item">
-            <blockquote>"Mariana é excepcional, tem uma forma de se expressar muito clara e positiva. Podem trazer ela muitas vezes."</blockquote>
-            <p class="depo-author">Profissional de Vendas — Oficina de Inteligência Emocional e Comunicação Assertiva</p>
+            <blockquote>"Mariana é excepcional, tem uma forma de se expressar muito clara e positiva. Excelentes dicas em pontos que muitas vezes se passam despercebidos e fazem toda diferença na hora da venda!"</blockquote>
+            <p class="depo-author">Profissional de Vendas — Inside Sales Academy</p>
           </div>
           <div class="depo-item">
             <blockquote>"A abordagem alia profundidade conceitual e aplicação prática real na rotina escolar."</blockquote>
@@ -386,6 +616,34 @@
             <p class="depo-author">Coordenadora Pedagógica — Escola Particular, SP</p>
           </div>
         </div>
+        <div class="depo-card">
+          <div class="depo-item">
+            <blockquote>"O Portal de Educação Emocional é parceiro há anos de dois projetos de extensão que coordeno na UFPE. O Portal tem uma função fundamental e necessária no mundo atual e diante da realidade de nossas escolas."</blockquote>
+            <p class="depo-author">Viviane Louro — Educadora e Neurocientista, UFPE</p>
+          </div>
+          <div class="depo-item">
+            <blockquote>"A palestra sobre inteligência emocional foi incrivelmente positiva. Destaco a completude, a didática, a simplicidade e a clareza — uma das mais abrangentes que já presenciei sobre o assunto."</blockquote>
+            <p class="depo-author">Marimar Pereira Guaraná — World Creativity Day 2024</p>
+          </div>
+          <div class="depo-item">
+            <blockquote>"A oficina trouxe aconselhamentos importantes que contribuirão muito para que venhamos nos comunicar com maior clareza e os objetivos serem alcançados!"</blockquote>
+            <p class="depo-author">Conceição Caminha da Silva — Oficina de Comunicação Assertiva para Empreendedores</p>
+          </div>
+        </div>
+        <div class="depo-card">
+          <div class="depo-item">
+            <blockquote>"Como mãe de uma criança de 10 anos, fiquei muito satisfeita com a palestra sobre bullying e ciberbullying. Foi apresentado como identificar os sinais de forma muito clara e objetiva. Recomendo muito!"</blockquote>
+            <p class="depo-author">Bárbara, mãe de Lara</p>
+          </div>
+          <div class="depo-item">
+            <blockquote>"Mariana foi nas causas para resolver o problema do bullying. Quase nunca isso é feito às claras ou na frente de professores, coordenadores ou diretores, né? Fantástico!"</blockquote>
+            <p class="depo-author">Niedja Tenório — Educadora</p>
+          </div>
+          <div class="depo-item">
+            <blockquote>"Amei as aulas. Tem coisas que já tinha visto mas nunca tinha pensado na aplicação no mundo corporativo. Posso dizer de longe que é uma das melhores aulas que tive."</blockquote>
+            <p class="depo-author">Participante — Oficina Avançada de Inteligência Emocional, Inside Sales Academy</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="depo-nav">
@@ -393,12 +651,13 @@
       <div class="depo-dots">
         <button class="depo-dot active" data-index="0"></button>
         <button class="depo-dot" data-index="1"></button>
+        <button class="depo-dot" data-index="2"></button>
+        <button class="depo-dot" data-index="3"></button>
       </div>
       <button class="depo-btn" id="depoNext">&#8594;</button>
     </div>
   </section>
 
-  <!-- CONTATO -->
   <section id="contato">
     <p class="section-label">Contato</p>
     <h2 class="section-title">Educação Emocional Integral<br/>na Prática começa pelas pessoas.</h2>
@@ -416,28 +675,38 @@
         <span class="info-label">WhatsApp</span>
         <span class="info-value">(81) 99197-8876</span>
       </div>
+      <div class="contato-info-item">
+        <span class="info-label">Instagram</span>
+        <span class="info-value"><a href="https://instagram.com/portaleducacaoemocional" target="_blank">@portaleducacaoemocional</a></span>
+      </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <span class="footer-logo">Portal Educação Emocional</span>
+    <span class="footer-logo"><img src="imgs/logo_portal_semfundo.png" alt="Portal Educação Emocional" /></span>
     <span class="footer-copy">© 2026 Mariana Arantes. Centro de Aplicação em Educação Emocional Integral.</span>
   </footer>
 
   <script>
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 40);
-    });
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 40); });
 
-    // Carrossel Hero
+    const hamburger = document.getElementById('hamburger');
+    const navMobile = document.getElementById('navMobile');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navMobile.classList.toggle('open');
+    });
+    function closeMenu() {
+      hamburger.classList.remove('open');
+      navMobile.classList.remove('open');
+    }
+
     const heroTrack = document.getElementById('heroTrack');
     const heroDots = document.querySelectorAll('.hero-carousel-dot');
     let heroCurrent = 0;
-    const heroTotal = 5;
     function heroGoTo(n) {
-      heroCurrent = (n + heroTotal) % heroTotal;
+      heroCurrent = (n + 5) % 5;
       heroTrack.style.transform = `translateX(-${heroCurrent * 100}%)`;
       heroDots.forEach((d, i) => d.classList.toggle('active', i === heroCurrent));
     }
@@ -446,20 +715,18 @@
     heroDots.forEach(d => d.addEventListener('click', () => heroGoTo(+d.dataset.index)));
     setInterval(() => heroGoTo(heroCurrent + 1), 4000);
 
-    // Carrossel Depoimentos
-    const track = document.getElementById('depoTrack');
-    const dots = document.querySelectorAll('.depo-dot');
-    let current = 0;
-    const total = 2;
-    function goToSlide(n) {
-      current = (n + total) % total;
-      track.style.transform = `translateX(-${current * 100}%)`;
-      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    const depoTrack = document.getElementById('depoTrack');
+    const depoDots = document.querySelectorAll('.depo-dot');
+    let depoCurrent = 0;
+    function depoGoTo(n) {
+      depoCurrent = (n + 4) % 4;
+      depoTrack.style.transform = `translateX(-${depoCurrent * 100}%)`;
+      depoDots.forEach((d, i) => d.classList.toggle('active', i === depoCurrent));
     }
-    document.getElementById('depoNext').addEventListener('click', () => goToSlide(current + 1));
-    document.getElementById('depoPrev').addEventListener('click', () => goToSlide(current - 1));
-    dots.forEach(d => d.addEventListener('click', () => goToSlide(+d.dataset.index)));
-    setInterval(() => goToSlide(current + 1), 6000);
+    document.getElementById('depoNext').addEventListener('click', () => depoGoTo(depoCurrent + 1));
+    document.getElementById('depoPrev').addEventListener('click', () => depoGoTo(depoCurrent - 1));
+    depoDots.forEach(d => d.addEventListener('click', () => depoGoTo(+d.dataset.index)));
+    setInterval(() => depoGoTo(depoCurrent + 1), 6000);
   </script>
 
 </body>
