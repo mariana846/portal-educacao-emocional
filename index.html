@@ -6,21 +6,11 @@
   <title>Portal Educação Emocional | Mariana Arantes</title>
   <meta name="description" content="Centro de Aplicação em Educação Emocional Integral. Aplicação prática da educação emocional escolar e desenvolvimento de competências socioemocionais em escolas, famílias e organizações." />
   <meta name="keywords" content="educação emocional escolar, competências socioemocionais, saúde emocional na escola, prevenção de conflitos escolares, cultura emocional institucional, Mariana Arantes" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
-
   <style>
-    :root {
-      --navy:     #1f3a5f;
-      --cream:    #f4f1ec;
-      --terra:    #c86a4a;
-      --sage:     #7c9a92;
-      --ink:      #333333;
-      --cream-alt:#ede9e2;
-      --navy-light: #2a4d7a;
-    }
+    :root { --navy: #1f3a5f; --cream: #f4f1ec; --terra: #c86a4a; --sage: #7c9a92; --ink: #333333; --cream-alt: #ede9e2; --navy-light: #2a4d7a; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Lato', sans-serif; background: var(--cream); color: var(--ink); font-size: 17px; line-height: 1.75; overflow-x: hidden; }
@@ -45,14 +35,18 @@
     .btn-primary:hover { background: #b05a3b; transform: translateY(-1px); }
     .btn-secondary { border: 2px solid var(--navy); color: var(--navy); padding: 0.85rem 2rem; border-radius: 3px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.06em; font-weight: 700; font-family: 'Lato', sans-serif; transition: all 0.2s; display: inline-block; }
     .btn-secondary:hover { background: var(--navy); color: white; }
-    .hero-right { position: relative; overflow: hidden; }
-    .hero-mosaic { display: grid; grid-template-columns: 1.4fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px; height: 100%; min-height: calc(100vh - 80px); }
-    .mosaic-main { grid-row: 1 / 3; overflow: hidden; }
-    .mosaic-main img, .mosaic-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
-    .mosaic-main:hover img, .mosaic-thumb:hover img { transform: scale(1.04); }
-    .mosaic-thumb { overflow: hidden; }
-    .mosaic-bottom { grid-column: 1 / 3; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; }
-    .mosaic-bottom .mosaic-thumb { overflow: hidden; height: 180px; }
+    .hero-right { position: relative; overflow: hidden; background: var(--navy); }
+    .hero-carousel { width: 100%; height: 100%; min-height: calc(100vh - 80px); position: relative; overflow: hidden; }
+    .hero-carousel-track { display: flex; height: 100%; transition: transform 0.6s ease; }
+    .hero-slide { min-width: 100%; height: 100%; overflow: hidden; }
+    .hero-slide img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+    .hero-carousel-dots { position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 10; }
+    .hero-carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); border: none; cursor: pointer; transition: background 0.2s; padding: 0; }
+    .hero-carousel-dot.active { background: white; }
+    .hero-carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.15); border: none; color: white; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; z-index: 10; transition: background 0.2s; }
+    .hero-carousel-btn:hover { background: rgba(255,255,255,0.3); }
+    .hero-carousel-btn.prev { left: 1rem; }
+    .hero-carousel-btn.next { right: 1rem; }
     section { padding: 6rem 8vw; }
     .section-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terra); font-weight: 700; font-family: 'Lato', sans-serif; margin-bottom: 1rem; }
     .section-title { font-size: clamp(2rem, 3.5vw, 3rem); color: var(--navy); margin-bottom: 1.5rem; }
@@ -71,7 +65,7 @@
     .atuacao-card p { font-size: 0.9rem; color: #666; line-height: 1.7; }
     .atuacao-card .card-note { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--sage); font-style: italic; margin-top: 0.8rem; font-weight: 500; }
     #pesquisa { background: var(--cream); }
-    .pesquisa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+    .pesquisa-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
     .pesquisa-card { background: white; border-radius: 4px; padding: 2rem; border: 1px solid rgba(31,58,95,0.1); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.2rem; transition: box-shadow 0.2s; }
     .pesquisa-card:hover { box-shadow: 0 4px 20px rgba(31,58,95,0.08); }
     .pesquisa-card img { width: 140px; height: 140px; object-fit: contain; }
@@ -108,13 +102,12 @@
     .tedx-block p { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--navy); font-style: italic; }
     .tedx-link { background: var(--terra); color: white; padding: 0.45rem 1.1rem; border-radius: 3px; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.06em; font-weight: 700; font-family: 'Lato', sans-serif; white-space: nowrap; transition: background 0.2s; }
     .tedx-link:hover { background: #b05a3b; }
-    .logos-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); font-weight: 700; font-family: 'Lato', sans-serif; margin-bottom: 1.5rem; }
+    .logos-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); font-weight: 700; font-family: 'Lato', sans-serif; margin-bottom: 1.5rem; display: block; }
     .logos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 1.2rem; align-items: center; }
     .logo-item { background: white; border-radius: 4px; padding: 1rem; display: flex; align-items: center; justify-content: center; height: 80px; transition: box-shadow 0.2s; }
     .logo-item:hover { box-shadow: 0 2px 12px rgba(31,58,95,0.1); }
     .logo-item img { max-width: 100%; max-height: 50px; object-fit: contain; filter: grayscale(30%); transition: filter 0.2s; }
     .logo-item:hover img { filter: grayscale(0%); }
-    .logo-text { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-weight: 600; color: var(--navy); text-align: center; }
     #depoimentos { background: var(--cream); }
     .depo-carousel { position: relative; margin-top: 3.5rem; overflow: hidden; }
     .depo-track { display: flex; transition: transform 0.4s ease; }
@@ -152,10 +145,7 @@
     .hero-btns { animation: fadeUp 0.6s ease both; animation-delay: 0.7s; opacity: 0; }
     @media (max-width: 900px) {
       #hero { grid-template-columns: 1fr; min-height: auto; }
-      .hero-mosaic { min-height: 320px; grid-template-columns: 1fr 1fr; grid-template-rows: 200px 120px; }
-      .mosaic-main { grid-row: 1; }
-      .mosaic-bottom { grid-column: 1 / 3; }
-      .mosaic-bottom .mosaic-thumb { height: 120px; }
+      .hero-carousel { min-height: 320px; }
       .hero-left { padding: 4rem 6vw 3rem; }
       .atuacao-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .pesquisa-grid { grid-template-columns: 1fr; }
@@ -169,7 +159,7 @@
   </style>
 </head>
 <body>
-<!-- NAV -->
+  <!-- NAV -->
   <nav id="navbar">
     <a href="#hero" class="nav-logo">Portal Educação Emocional</a>
     <ul class="nav-links">
@@ -197,26 +187,22 @@
       </div>
     </div>
     <div class="hero-right">
-      <div class="hero-mosaic">
-        <div class="mosaic-main">
-          <img src="imgs/foto1_sebrae_palco.jpg" alt="Mariana Arantes no palco SEBRAE" loading="lazy" />
+      <div class="hero-carousel" id="heroCarousel">
+        <div class="hero-carousel-track" id="heroTrack">
+          <div class="hero-slide"><img src="imgs/foto1_sebrae_palco.jpg" alt="Mariana Arantes no palco SEBRAE" /></div>
+          <div class="hero-slide"><img src="imgs/foto2_grupo_bracos.jpg" alt="Grupo com braços levantados" /></div>
+          <div class="hero-slide"><img src="imgs/foto3_fiep_palco.png" alt="Palco FIEP" /></div>
+          <div class="hero-slide"><img src="imgs/foto4_sebrae_microfone.jpg" alt="Mariana palestrando" /></div>
+          <div class="hero-slide"><img src="imgs/foto5_portico_equipe.jpg" alt="Formação Pórtico" /></div>
         </div>
-        <div class="mosaic-thumb">
-          <img src="imgs/foto2_grupo_bracos.jpg" alt="Grupo com braços levantados" loading="lazy" />
-        </div>
-        <div class="mosaic-thumb">
-          <img src="imgs/foto3_fiep_palco.png" alt="Palco FIEP" loading="lazy" />
-        </div>
-        <div class="mosaic-bottom">
-          <div class="mosaic-thumb">
-            <img src="imgs/foto4_sebrae_microfone.jpg" alt="Mariana palestrando no SEBRAE" loading="lazy" />
-          </div>
-          <div class="mosaic-thumb">
-            <img src="imgs/foto5_portico_equipe.jpg" alt="Formação Pórtico" loading="lazy" />
-          </div>
-          <div class="mosaic-thumb">
-            <img src="imgs/mariana_perfil.jpg" alt="Mariana Arantes" loading="lazy" />
-          </div>
+        <button class="hero-carousel-btn prev" id="heroPrev">&#8592;</button>
+        <button class="hero-carousel-btn next" id="heroNext">&#8594;</button>
+        <div class="hero-carousel-dots" id="heroDots">
+          <button class="hero-carousel-dot active" data-index="0"></button>
+          <button class="hero-carousel-dot" data-index="1"></button>
+          <button class="hero-carousel-dot" data-index="2"></button>
+          <button class="hero-carousel-dot" data-index="3"></button>
+          <button class="hero-carousel-dot" data-index="4"></button>
         </div>
       </div>
     </div>
@@ -280,6 +266,14 @@
           <p>Pesquisa aplicada voltada à saúde emocional e ao fortalecimento do educador da rede pública, em parceria com a Universidade Federal de Pernambuco.</p>
         </div>
       </div>
+      <div class="pesquisa-card">
+        <img src="imgs/logo_formacao_humana.jpg" alt="Instituto de Formação Humana" />
+        <div>
+          <p class="pesquisa-badge">Parceria Instituto de Formação Humana</p>
+          <h3>Instituto de Formação Humana</h3>
+          <p>Parceria voltada ao desenvolvimento humano integral, unindo pesquisa e prática educacional com foco em competências socioemocionais.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -341,7 +335,7 @@
       <p>Palestrante TEDx — indicada pelo Ministério da Educação</p>
       <a href="https://www.youtube.com/watch?v=wMaMaPU3l88" target="_blank" class="tedx-link">▶ Assistir palestra</a>
     </div>
-    <p class="logos-label">Clientes</p>
+    <span class="logos-label">Clientes</span>
     <div class="logos-grid">
       <div class="logo-item"><img src="imgs/logo_sebrae.png" alt="SEBRAE" /></div>
       <div class="logo-item"><img src="imgs/logo_portico.png" alt="Pórtico" /></div>
@@ -350,11 +344,11 @@
       <div class="logo-item"><img src="imgs/logo_petrolina.png" alt="Prefeitura de Petrolina" /></div>
       <div class="logo-item"><img src="imgs/logo_sindsprev.png" alt="Sindsprev" /></div>
       <div class="logo-item"><img src="imgs/logo_cfl.jpg" alt="CFL Sindsprev" /></div>
-      <div class="logo-item"><span class="logo-text">SESC</span></div>
-      <div class="logo-item"><span class="logo-text">SENAC</span></div>
-      <div class="logo-item"><span class="logo-text">UPE / FCAP</span></div>
-      <div class="logo-item"><span class="logo-text">Diretriz Eventos</span></div>
-      <div class="logo-item"><span class="logo-text">Inside Sales Academy</span></div>
+      <div class="logo-item"><img src="imgs/logo_senac.png" alt="SENAC" /></div>
+      <div class="logo-item"><img src="imgs/logo_fcap_upe.png" alt="FCAP/UPE" /></div>
+      <div class="logo-item"><img src="imgs/logo_upe.jpg" alt="UPE" /></div>
+      <div class="logo-item"><img src="imgs/logo_inside_sales.png" alt="Inside Sales Academy" /></div>
+      <div class="logo-item"><img src="imgs/logo_sicap.jpg" alt="SICAP Soluções" /></div>
     </div>
   </section>
 
@@ -436,6 +430,23 @@
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 40);
     });
+
+    // Carrossel Hero
+    const heroTrack = document.getElementById('heroTrack');
+    const heroDots = document.querySelectorAll('.hero-carousel-dot');
+    let heroCurrent = 0;
+    const heroTotal = 5;
+    function heroGoTo(n) {
+      heroCurrent = (n + heroTotal) % heroTotal;
+      heroTrack.style.transform = `translateX(-${heroCurrent * 100}%)`;
+      heroDots.forEach((d, i) => d.classList.toggle('active', i === heroCurrent));
+    }
+    document.getElementById('heroNext').addEventListener('click', () => heroGoTo(heroCurrent + 1));
+    document.getElementById('heroPrev').addEventListener('click', () => heroGoTo(heroCurrent - 1));
+    heroDots.forEach(d => d.addEventListener('click', () => heroGoTo(+d.dataset.index)));
+    setInterval(() => heroGoTo(heroCurrent + 1), 4000);
+
+    // Carrossel Depoimentos
     const track = document.getElementById('depoTrack');
     const dots = document.querySelectorAll('.depo-dot');
     let current = 0;
