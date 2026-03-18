@@ -298,25 +298,9 @@
       </div>
     </div>
     <div class="hero-right">
-      <div class="hero-carousel">
-        <div class="hero-carousel-track" id="heroTrack">
-          <div class="hero-slide"><img src="imgs/foto1_sebrae_palco.jpg" alt="Mariana Arantes palestrando no SEBRAE com plateia de braços levantados" /></div>
-          <div class="hero-slide"><img src="imgs/foto2_grupo_bracos.jpg" alt="Grupo de educadores em formação de Educação Emocional Integral com braços levantados" /></div>
-          <div class="hero-slide"><img src="imgs/foto3_fiep_palco.png" alt="Mariana Arantes no palco da FIEP apresentando a Metodologia Educação Emocional Integral" /></div>
-          <div class="hero-slide"><img src="imgs/foto4_sebrae_microfone.jpg" alt="Mariana Arantes palestrando com microfone em evento institucional" /></div>
-          <div class="hero-slide"><img src="imgs/foto5_portico_equipe.jpg" alt="Formação corporativa em Educação Emocional Integral para equipe da empresa Pórtico" /></div>
-        </div>
-        <button class="hero-carousel-btn prev" id="heroPrev">&#8592;</button>
-        <button class="hero-carousel-btn next" id="heroNext">&#8594;</button>
-        <div class="hero-carousel-dots">
-          <button class="hero-carousel-dot active" data-index="0"></button>
-          <button class="hero-carousel-dot" data-index="1"></button>
-          <button class="hero-carousel-dot" data-index="2"></button>
-          <button class="hero-carousel-dot" data-index="3"></button>
-          <button class="hero-carousel-dot" data-index="4"></button>
-        </div>
-      </div>
-    </div>
+<div class="hero-foto">        
+  <img src="imgs/foto1_sebrae_palco.jpg" alt="Mariana Arantes palestrando no SEBRAE" />
+
   </section>
 
   <section id="quem-somos">
@@ -703,7 +687,7 @@
     }
 
     const heroTrack = document.getElementById('heroTrack');
-    const heroDots = document.querySelectorAll('.hero-carousel-dot');
+    const heroDots = document.querySelectorAll('.hero-foto-dot');
     let heroCurrent = 0;
     function heroGoTo(n) {
       heroCurrent = (n + 5) % 5;
